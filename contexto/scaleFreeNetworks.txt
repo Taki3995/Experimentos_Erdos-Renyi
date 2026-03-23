@@ -1,0 +1,195 @@
+Network Science
+Scale-Free Networks
+Wenceslao Palma, Javier Vera
+{wenceslao.palma,javier.vera}@pucv.cl
+NetworkScience-Scale-FreeNetworks 1/14
+
+The Degree Distribution of the WWW 1
+The WWW is a directed network where each document has a out-degree and an
+in-degree.
+Smalldegreenodescoexistwithafewnodeswithanexceptionallylargenumberof
+links (hubs).
+Empirical results over the WWW network degree distribution is different from the
+Poisson Distribution characterizing random networks.
+1all pictures are taken from Barab´asi book
+NetworkScience-Scale-FreeNetworks 2/14
+
+A scale-free network is a network whose degree distribution follows a power law
+Power Laws and Scale-Free Networks
+The figure suggests that the degree distribution of the WWW is approximated by
+p ∼k−γ
+k
+Taking the logarithm of both sides, we obtain
+lnp ∼−γlnk
+k
+NetworkScience-Scale-FreeNetworks 3/14
+
+Power Laws and Scale-Free Networks
+The figure suggests that the degree distribution of the WWW is approximated by
+p ∼k−γ
+k
+Taking the logarithm of both sides, we obtain
+lnp ∼−γlnk
+k
+A scale-free network is a network whose degree distribution follows a power law
+NetworkScience-Scale-FreeNetworks 3/14
+
+Power Laws and Scale-Free Networks
+The WWW is a directed network → two degree distributions:
+the probability that a randomly chosen document points to k web
+out
+documents
+p
+kout
+∼ k−γout ,γ
+out
+≈ 2.45
+the probability that a randomly chosen document is pointed by k
+in
+web documents
+p
+kin
+∼ k−γin ,γ
+in
+≈ 2.1
+NetworkScience-Scale-FreeNetworks 4/14
+
+Power Laws and Scale-Free Networks
+The discrete formalism
+p ∼ Ck−γ
+k
+∞
+(cid:88) 1 1
+p = 1 → C = =
+k ∞ ζ(γ)
+(cid:88)
+k=1 k−γ
+k=1
+k−γ
+p = ,k > 0
+k
+ζ(γ)
+NetworkScience-Scale-FreeNetworks 5/14
+
+Power Laws and Scale-Free Networks
+The continuum formalism
+p = Ck−γ
+k
+(cid:90) ∞ 1
+p(k)dk = 1 → C = = (γ −1)kγ−1
+(cid:90) ∞ min
+kmin k−γdk
+kmin
+p = (γ −1)kγ−1k−γ
+k min
+NetworkScience-Scale-FreeNetworks 6/14
+
+Hubs
+Forsmallk: largenumberofsmall-degreenodeswhichareabsentinrandomnetworks.
+Forkinthevicinityof(cid:104)k(cid:105): excessofnodeswithdegreek≈(cid:104)k(cid:105)inarandomnetwork.
+Forlargek: highdegreenodes(hubs)aremorepresentinscale-freethaninrandom
+networks.
+NetworkScience-Scale-FreeNetworks 7/14
+
+Hubs
+The estimated degree of the largest node (natural cutoff) of different
+networks with same N and (cid:104)k(cid:105).
+In large scale-free network, the larger is the network, the larger is the
+degree of its biggest hub.
+In random networks, the size of the largest node grows logarithmically
+(slower) with N. Hubs will be tiny even in very large random networks.
+NetworkScience-Scale-FreeNetworks 8/14
+
+Random vs Scale-free networks
+NetworkScience-Scale-FreeNetworks 9/14
+
+The Meaning of Scale-Free
+The key to best understand the meaning of the scale-free term are the
+moments of the degree distribution.
+∞ (cid:90) ∞
+(cid:88)
+(cid:104)kn(cid:105) = knp ≈ knp(k)
+k
+kmin
+kmin
+The first moment (n = 1) is the average degree (cid:104)k(cid:105).
+The second moment (n = 2), help us to calculate the spread in the
+degrees (variance) σ2 = (cid:104)k2(cid:105)−(cid:104)k(cid:105)2.
+k
+The third moment (n = 3), determines how symmetric p is around
+k
+the average (cid:104)k(cid:105).
+NetworkScience-Scale-FreeNetworks 10/14
+
+The Meaning of Scale-Free
+For a scale-free network, the nth moment of the degree distribution is
+(cid:104)kn(cid:105) =
+k (cid:88)max
+knp = C
+k
+m
+n−
+ax
+γ+1−k
+m
+n−
+in
+γ+1
+k
+n−γ +1
+kmin
+To understand the behaviour of (cid:104)kn(cid:105) we must take the asymptotic limit
+k → ∞
+max
+if n−γ +1 ≤ 0 then kn−γ+1 → 0 as k increases. Therefore, all
+max max
+moments that satisfy n ≤ γ −1 are finite.
+if n−γ +1 > 0 then (cid:104)kn(cid:105) → ∞ as k increases. Therefore all
+max
+moments greater than γ −1 diverge.
+NetworkScience-Scale-FreeNetworks 11/14
+
+The average degree (cid:104)k(cid:105) serves as ”scale” of a random network.
+The Meaning of Scale-Free
+Random networks have a scale. Random networks with poisson
+degree distribution σ = (cid:104)k(cid:105)1/2 is always smaller than (cid:104)k(cid:105). Thus, nodes
+in a random network have comparable degrees (k = (cid:104)k(cid:105)±(cid:104)k(cid:105)1/2).
+NetworkScience-Scale-FreeNetworks 12/14
+
+The Meaning of Scale-Free
+Random networks have a scale. Random networks with poisson
+degree distribution σ = (cid:104)k(cid:105)1/2 is always smaller than (cid:104)k(cid:105). Thus, nodes
+in a random network have comparable degrees (k = (cid:104)k(cid:105)±(cid:104)k(cid:105)1/2).
+The average degree (cid:104)k(cid:105) serves as ”scale” of a random network.
+NetworkScience-Scale-FreeNetworks 12/14
+
+When we randomly choose a node, its degree could be tiny or arbitrarily
+large. Thus, networks with γ < 3 do not have a internal scale, they are
+”scale-free”.
+The Meaning of Scale-Free
+Scale-free networks lack a scale. Networks with a power-law
+degree distribution and γ < 3, the first moment is finite but the
+second moment is infinite → for large N the fluctuations around the
+average can be arbitrarily large.
+NetworkScience-Scale-FreeNetworks 13/14
+
+The Meaning of Scale-Free
+Scale-free networks lack a scale. Networks with a power-law
+degree distribution and γ < 3, the first moment is finite but the
+second moment is infinite → for large N the fluctuations around the
+average can be arbitrarily large.
+When we randomly choose a node, its degree could be tiny or arbitrarily
+large. Thus, networks with γ < 3 do not have a internal scale, they are
+”scale-free”.
+NetworkScience-Scale-FreeNetworks 13/14
+
+The crucial question is: How do we know if a network is scale-free?
+Universality
+(a) Internet (router level), (b) Protein Interact. (c) Emails (d) Citations
+NetworkScience-Scale-FreeNetworks 14/14
+
+Universality
+(a) Internet (router level), (b) Protein Interact. (c) Emails (d) Citations
+The crucial question is: How do we know if a network is scale-free?
+NetworkScience-Scale-FreeNetworks 14/14
+

@@ -1,0 +1,259 @@
+Network Science
+Random Networks
+Wenceslao Palma, Javier Vera
+{wenceslao.palma,javier.vera}@pucv.cl
+NetworkScience-RandomNetworks 1/21
+
+Is a network property emerged by chance?
+If yes, it means that randomness can account for it.
+If not, it requires a deeper explanation (something interesting is
+happening).
+Why studying random networks?
+Real networks are not random.
+The random network model serves as a reference when we are
+exploring real networks.
+NetworkScience-RandomNetworks 2/21
+
+If yes, it means that randomness can account for it.
+If not, it requires a deeper explanation (something interesting is
+happening).
+Why studying random networks?
+Real networks are not random.
+The random network model serves as a reference when we are
+exploring real networks.
+Is a network property emerged by chance?
+NetworkScience-RandomNetworks 2/21
+
+If not, it requires a deeper explanation (something interesting is
+happening).
+Why studying random networks?
+Real networks are not random.
+The random network model serves as a reference when we are
+exploring real networks.
+Is a network property emerged by chance?
+If yes, it means that randomness can account for it.
+NetworkScience-RandomNetworks 2/21
+
+Why studying random networks?
+Real networks are not random.
+The random network model serves as a reference when we are
+exploring real networks.
+Is a network property emerged by chance?
+If yes, it means that randomness can account for it.
+If not, it requires a deeper explanation (something interesting is
+happening).
+NetworkScience-RandomNetworks 2/21
+
+The Random Network Model G(N,p) 1
+A random network consists of N nodes where each node pair is connected
+with probability p.
+The steps to generate a random network are the following:
+1 Start with N isolated nodes.
+2 Select a node pair and generates a random number between 0 and 1.
+If the number exceeds p connect the nodes with a link, otherwise
+leave them disconnected.
+3 Repeat step 2 for each of the N(N −1)/2 node pairs.
+1aka Erdo¨s-R´enyi network
+NetworkScience-RandomNetworks 3/21
+
+Number of Links
+Random networks generated with the same parameters N and p.2
+2all the images are taken from Barabasi book.
+NetworkScience-RandomNetworks 4/21
+
+Number of Links
+The probability that a particular realization of a random network has
+exactly L links is
+p = (cid:0)N(N−1)/2(cid:1) pL(1−p)N(N−1)/2−L
+L L
+The expected number of links is
+N(N−1)
+(cid:104)L(cid:105) = p
+2
+The average degree is
+2(cid:104)L(cid:105)
+(cid:104)k(cid:105) = = p(N −1)
+N
+NetworkScience-RandomNetworks 5/21
+
+Degree distribution
+The degree distribution p is the probability that a randomly chosen
+k
+node has degree k.
+The degree distribution of a random network follows the binomial
+distribution
+p = (cid:0)N−1(cid:1) pk(1−p)N−1−k
+k k
+and we can calculate the network’s average degree (cid:104)k(cid:105) and its
+dispersion.
+NetworkScience-RandomNetworks 6/21
+
+Degree distribution
+Approximation with a Poisson distribution when networks are sparse
+((cid:104)k(cid:105) (cid:28) N)
+The Poisson distribution does not depend explicitly on N predicting that
+the degree distributions of networks of different sizes but the same (cid:104)k(cid:105) are
+indistinguishable from each other.
+NetworkScience-RandomNetworks 7/21
+
+Degree distribution
+The degree distribution is independent of the network size.
+Small networks → Binomial.
+Large networks → Poisson.
+NetworkScience-RandomNetworks 8/21
+
+This is not realistic, the prediction of the random model conflicts with
+reality.
+Real networks are not Poisson
+Suppose that the world’s social network (N ≈ 7×109) is described
+by the random network model.
+Sociologists estimate that a typical person knows about 1,000
+individuals → (cid:104)k(cid:105) ≈ 1,000.
+The degree of the most connected individual is expected to be
+k = 1,185.
+max
+The degree of the least-connected individual is expected to be
+k = 816.
+min
+The dispersion of the network is σ = (cid:104)k(cid:105)1/2 = 31.62, thus the
+k
+number of friends of a typical individual is in (cid:104)k(cid:105)±σ, i.e.
+[968...1,032].
+NetworkScience-RandomNetworks 9/21
+
+Real networks are not Poisson
+Suppose that the world’s social network (N ≈ 7×109) is described
+by the random network model.
+Sociologists estimate that a typical person knows about 1,000
+individuals → (cid:104)k(cid:105) ≈ 1,000.
+The degree of the most connected individual is expected to be
+k = 1,185.
+max
+The degree of the least-connected individual is expected to be
+k = 816.
+min
+The dispersion of the network is σ = (cid:104)k(cid:105)1/2 = 31.62, thus the
+k
+number of friends of a typical individual is in (cid:104)k(cid:105)±σ, i.e.
+[968...1,032].
+This is not realistic, the prediction of the random model conflicts with
+reality.
+NetworkScience-RandomNetworks 9/21
+
+Real networks are not Poisson
+The random network model does not capture the degree distribution of
+real networks. It underestimate the number of high-degree (hubs) nodes
+and the spread in the degrees (σ ).
+k
+NetworkScience-RandomNetworks 10/21
+
+The evolution of a random network
+(b) Subcritical regime (cid:104)k(cid:105) < 1, (c) Critical point (cid:104)k(cid:105) = 1, (d) Supercritical
+regime (cid:104)k(cid:105) > 1, (e) Connected regime (cid:104)k(cid:105) > lnN
+NetworkScience-RandomNetworks 11/21
+
+Real networks are Supercritical (cid:104)k(cid:105) > 1
+NetworkScience-RandomNetworks 12/21
+
+Small Worlds
+The small-world phenomenon a.k.a. six degrees of separation states
+that between any two individuals exists a path of at most six
+acquaintances.
+In terms of network science language this phenomenon implies that
+the distance between two randomly chosen nodes in a network is
+short.
+NetworkScience-RandomNetworks 13/21
+
+Small Worlds
+Two questions raises:
+1 What does short (small) mean?
+2 How do we explain the existence of this phenomenon?
+NetworkScience-RandomNetworks 14/21
+
+Small World
+Let us take a random network with average degree (cid:104)k(cid:105). A node in
+this network has on average (cid:104)k(cid:105) nodes at distance (d = 1), (cid:104)k(cid:105)2
+nodes at distance (d = 2),(cid:104)k(cid:105)3 nodes at distance (d = 3),....(cid:104)k(cid:105)d
+nodes at distance d.
+More formally the expected numbers of nodes up to distance d from a
+starting node is
+N(d) ≈ 1+(cid:104)k(cid:105)+(cid:104)k(cid:105)2+....+(cid:104)k(cid:105)d = (cid:104)k(cid:105)d+1−1
+(cid:104)k(cid:105)−1
+Assuming that (cid:104)k(cid:105) (cid:29) 1 and that N(d ) ≈ N
+max
+(cid:104)k(cid:105)dmax ≈ N
+and finally,
+d ≈ lnN
+max ln(cid:104)k(cid:105)
+and its offers a better approximation to the average distance, hence
+the small-world property is defined by (cid:104)d(cid:105) ≈ lnN
+ln(cid:104)k(cid:105)
+NetworkScience-RandomNetworks 15/21
+
+Small World
+ln(7×109)
+and for the world social network (cid:104)d(cid:105) ≈ = 3.28
+ln(103)
+NetworkScience-RandomNetworks 16/21
+
+Clustering Coefficient
+The degree of a node does not describe the relationship between the
+node’s neighbors.
+For a node i, the clustering coefficient (C ) is the probability that two
+i
+neighbors of the same node are themselves neighbors:
+C =0, means that there is no links between i’s neighbors.
+i
+C =1, means that each of i’s neighbors link to each other.
+i
+NetworkScience-RandomNetworks 17/21
+
+Clustering Coefficient
+In a random network the probability that two of i’s neighbors link to
+each other is p.
+There are k (k −2)/2 possible links between the k ’s neighbors of
+i i i
+node i.
+The expected number of links L is:
+i
+(cid:104)L (cid:105) = p
+ki(ki−1)
+i 2
+Thus, the local clustering coefficient of a random node i in a random
+network is:
+C =
+2(cid:104)Li(cid:105)
+= p =
+(cid:104)k(cid:105)
+i ki(ki−1) N
+NetworkScience-RandomNetworks 18/21
+
+Clustering Coefficient
+(cid:104)k(cid:105)
+p = makes two predictions:
+N
+1 For a fixed (cid:104)k(cid:105), the clustering coefficient of a node is smaller when the
+network becomes larger.
+2 The local clustering coefficient of a node is independent of the node’s
+degree.
+NetworkScience-RandomNetworks 19/21
+
+Clustering coefficient in real networks
+The random network model does not capture the clustering of real
+networks.
+NetworkScience-RandomNetworks 20/21
+
+Summary
+The random network model:
+1 is a bad model of degree distribution.
+Predicted p =
+e−(cid:104)k(cid:105)(cid:104)k(cid:105)k
+, Observed Many nodes with larger degree
+k k!
+than predicted.
+2 is a good model of path length.
+Predicted d =≈ lnN , Observed (cid:104)k(cid:105) ≈ lnN
+max ln(cid:104)k(cid:105) ln(cid:104)k(cid:105)
+3 is a bad model of clustering coefficient.
+NetworkScience-RandomNetworks 21/21
+

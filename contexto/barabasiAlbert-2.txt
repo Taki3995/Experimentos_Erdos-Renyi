@@ -1,0 +1,274 @@
+Network Science
+The Barab´asi-Albert Model
+Wenceslao Palma, Javier Vera
+{wenceslao.palma,javier.vera}@pucv.cl
+NetworkScience-TheBAModel 1/17
+
+To understand why such different systems converge to a similar topology
+we need to understand the mechanism responsible for the emergence of
+the scale-free property.
+Introduction1
+Hubs and scale-free topology are the main differences between
+random and scale-free networks.
+Two fundamental questions:
+Why do different systems converge to a similar scale-free topology?
+Why does the ER model fails to reproduce hubs and power laws
+observed in real networks?
+1all pictures are taken from Barab´asi book
+NetworkScience-TheBAModel 2/17
+
+Introduction1
+Hubs and scale-free topology are the main differences between
+random and scale-free networks.
+Two fundamental questions:
+Why do different systems converge to a similar scale-free topology?
+Why does the ER model fails to reproduce hubs and power laws
+observed in real networks?
+To understand why such different systems converge to a similar topology
+we need to understand the mechanism responsible for the emergence of
+the scale-free property.
+1all pictures are taken from Barab´asi book
+NetworkScience-TheBAModel 2/17
+
+Growth and preferential attachment play a fundamental role in shaping a network’s
+degree distribution.
+Introduction: Grow and preferential attachment
+In real networks the number of nodes grows continually thanks to the addition of
+new nodes. For example: the publication of new research papers. In order to
+model these networks, we need models of network growth.
+Nodes prefer to link to the more linked nodes. For example: more citations on a
+paper leads to more reads on it and it is more likely to be cited.
+NetworkScience-TheBAModel 3/17
+
+Introduction: Grow and preferential attachment
+In real networks the number of nodes grows continually thanks to the addition of
+new nodes. For example: the publication of new research papers. In order to
+model these networks, we need models of network growth.
+Nodes prefer to link to the more linked nodes. For example: more citations on a
+paper leads to more reads on it and it is more likely to be cited.
+Growth and preferential attachment play a fundamental role in shaping a network’s
+degree distribution.
+NetworkScience-TheBAModel 3/17
+
+Introduction: Grow and preferential attachment
+The random network model differs from real networks in two important
+characteristics:
+Growth: the ER model assumes that the number of nodes is fixed
+(time invariant) while real networks are result of a continuous growing
+process.
+Preferential attachment: in random networks nodes randomly
+choose their interaction partner randomly while in real networks nodes
+prefer to link to the more linked nodes.
+NetworkScience-TheBAModel 4/17
+
+The Barab´asi-Albert (BA) Model
+We start with m nodes, the links between them are chosen arbitrarily as
+0
+long as their degree is at least one. The network structure evolves
+following two steps:
+(A) Growth At each time step we add a new node with m ≤ m
+0
+outlinks.
+NetworkScience-TheBAModel 5/17
+
+The BA Model
+(B) Preferential Attachment: the probability Π(k) that a link of
+the new node connects to node i depends on the degree k as
+i
+k
+i
+Π(k ) =
+i
+N−1
+(cid:88)
+k
+j
+j=1
+NetworkScience-TheBAModel 6/17
+
+The BA Model
+After t time steps the BA model generates a network with
+N = t+m nodes and m +mt links.
+0 0
+The obtained network has a power-law degree distribution with degree
+exponent γ = 3
+NetworkScience-TheBAModel 7/17
+
+Degree dynamics
+We focus on the time evolution of the BA model to understand the
+emergence of the scale-free property.
+An existing node i increase its degree each time a new node enters
+the network.
+The new node will link to m of the N(t) nodes already present in the
+system.
+The probability that one of these links connects to node i is
+k
+i
+Π(k ) =
+i
+N−1
+(cid:88)
+k
+j
+j=1
+NetworkScience-TheBAModel 8/17
+
+Degree dynamics
+The degree k is approximated with a continuous real variable,
+i
+representing its expectation value over many realizations of the
+growth process.
+The rate at which an existing node i is linked by new nodes
+connecting to it is
+dk k
+i i
+= mΠ(k ) = m
+dt i (cid:80)N−1k
+j=1 j
+The sum in the denominator goes over all nodes in the network
+except the newly added node
+N−1
+(cid:88)
+k = 2mt−m
+j
+j=1
+NetworkScience-TheBAModel 9/17
+
+Degree dynamics
+and the rate becomes
+dk k
+i i
+=
+dt 2t−1
+for large t the term (−1) can be neglected.
+dk k
+i i
+=
+dt 2t
+Integrating and using k (t ) = m
+i i
+(cid:90) t dk (cid:90) t dt
+i
+=
+k 2t
+t=ti i t=ti
+NetworkScience-TheBAModel 10/17
+
+Degree dynamics
+1 1
+lnk (t)−lnk (t ) = lnt− lnt
+i i i i
+2 2
+1 1
+lnk (t) = lnt− lnt +lnk (t )
+i i i i
+2 2
+1 1
+lnk (t) = lnt− lnt +lnm
+i i
+2 2
+(cid:16)t(cid:17)1
+k (t) = m 2
+i
+t
+i
+(cid:16)t(cid:17)β
+k (t) = m
+i
+t
+i
+NetworkScience-TheBAModel 11/17
+
+Hubs are larger because they arrived earlier, a phenomenon called
+first-mover advantage in marketing and business.
+Degree dynamics
+(cid:16)t(cid:17)β
+k (t) = m
+i
+t
+i
+The above equation offers some predictions:
+All the nodes follow the same dynamical law.
+The degree growth is sublinear (β < 1).
+If t < t node i is older than node j =⇒ k (t) > k (t)
+i j i j
+The rate at which node i acquires new links is given by:
+dk (t) m 1
+i
+= √
+dt 2 t t
+i
+NetworkScience-TheBAModel 12/17
+
+Degree dynamics
+(cid:16)t(cid:17)β
+k (t) = m
+i
+t
+i
+The above equation offers some predictions:
+All the nodes follow the same dynamical law.
+The degree growth is sublinear (β < 1).
+If t < t node i is older than node j =⇒ k (t) > k (t)
+i j i j
+The rate at which node i acquires new links is given by:
+dk (t) m 1
+i
+= √
+dt 2 t t
+i
+Hubs are larger because they arrived earlier, a phenomenon called
+first-mover advantage in marketing and business.
+NetworkScience-TheBAModel 12/17
+
+Degree dynamics
+(a) the growth of the degree of nodes added at time t, (b) degree distribution of the
+network after adding N =102,104 and 106 nodes at time t=102,104 and 106
+NetworkScience-TheBAModel 13/17
+
+Degree dynamics
+The BA model offers a dynamical description of a network’s evolution
+capturing the fact that in real networks nodes arrive one after the other.
+During the network’s evolution nodes compete for links where the older
+nodes have an advantage over the younger ones, eventually turning into
+hubs.
+NetworkScience-TheBAModel 14/17
+
+Degree distribution
+The CDF of the degree distribution
+(cid:32) (cid:33)
+(cid:16)t(cid:17)β
+P(k ≤ k) = 1−P(k > k) = 1−P m > k
+i i
+t
+i
+(cid:32) (cid:33)
+(cid:16)m(cid:17)1 t (cid:16)m(cid:17)1
+= 1−P β > i = 1− β
+k t k
+NetworkScience-TheBAModel 15/17
+
+Degree distribution
+By taking the derivative of the CDF we obtain the degree distribution:
+1
+dP(k
+i
+≤ k) 1 mβ m2
+p = = = 2
+k dk β 1+1 k3
+kβ
+β = 1, is the dynamical exponent.
+2
+γ = 1 +1 = 3, is the power-law exponent.
+β
+The analytical calculations predicts that the BA model generates a
+scale-free network with degree exponent γ = 3.
+The degree distributions is stationary, explaining why networks with
+different history, size and age develop a similar degree distribution.
+NetworkScience-TheBAModel 16/17
+
+Bibliography
+Network Science, Albert-L´aszl´o Barab´asi, Cambridge University Press,
+2016.
+NetworkScience-TheBAModel 17/17
+
