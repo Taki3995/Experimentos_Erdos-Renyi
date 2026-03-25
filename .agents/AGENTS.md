@@ -48,3 +48,4 @@ Tienes acceso a Engram a través de tus herramientas MCP. Úsalo proactivamente 
 - Tienes ESTRICTAMENTE PROHIBIDO crear, ejecutar o borrar scripts temporales de Python (.py) para generar o ensamblar cuadernos `.ipynb`.
 - Tienes ESTRICTAMENTE PROHIBIDO usar la terminal (bash/comandos) para generar la estructura del cuaderno.
 - Todas las mejoras, ediciones o creación de archivos `.ipynb` deben hacerse introduciendo el JSON directamente de forma nativa.
+- ESTRICTAMENTE OBLIGATORIO: Debes revisar que todo funcione correctamente luego de cada cambio (e.g. verificar formato JSON, validar ejecución si es posible, revisar consistencia de métricas).
