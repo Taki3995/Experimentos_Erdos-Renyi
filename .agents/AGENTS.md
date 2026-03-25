@@ -43,3 +43,8 @@ Seleccione desde el sitio Network Repository tres redes (G1, G2 y G3) pertenecie
 
 # Herramientas
 Tienes acceso a Engram a través de tus herramientas MCP. Úsalo proactivamente para guardar decisiones arquitectónicas, requerimientos del profesor o configuraciones de paquetes. Antes de empezar a programar una nueva fase, consulta a Engram si hay decisiones previas relacionadas con ese problema.
+
+# Reglas Estrictas de Generación (Cuadernos)
+- Tienes ESTRICTAMENTE PROHIBIDO crear, ejecutar o borrar scripts temporales de Python (.py) para generar o ensamblar cuadernos `.ipynb`.
+- Tienes ESTRICTAMENTE PROHIBIDO usar la terminal (bash/comandos) para generar la estructura del cuaderno.
+- Todas las mejoras, ediciones o creación de archivos `.ipynb` deben hacerse introduciendo el JSON directamente de forma nativa.
